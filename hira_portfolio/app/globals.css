@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Gloock&family=Montserrat:wght@200;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;700;800;900&display=swap');
+
+.light {
+    --primary-color: #E54B4B;
+    --primarylight-color: #FEF6F6;
+    --secondary-color: #FFFFFF;
+    --textlight-color: #727272;
+    --text-color: #1A1A1A;
+   
+  }
+  
+  .dark {
+    --primary-color: #ffa8a8;
+    --primarylight-color: #211F2F;
+    --secondary-color: #211F2F;
+    --textlight-color: #ffa8a8;
+    --text-color: #F7FAFC;
+    
+  }
+
+  .bg-primary {
+    background-color: var(--primary-color);
+  }
+  
+  .bg-secondary {
+    background-color: var(--secondary-color);
+  }
+
+  .bg-primarylight {
+    background-color: var(--primarylight-color);
+  }
+  
+  .text-textlight {
+    color: var(--textlight-color);
+  }
+  
+  .text-text {
+    color: var(--text-color);
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    .light {
+      --primary-color: #48BB78;
+      --secondary-color: #90CDF4;
+      --background-color: #1A1A1A;
+      --text-color: #F7FAFC;
+    }
+    
+    .dark {
+      --primary-color: #F6AD55;
+      --secondary-color: #F7CAC9;
+      --background-color: #FFFFFF;
+      --text-color: #1A1A1A;
+    }
+  }
+
+  .fade-enter {
+    opacity: 0;
+  }
+  
+  .fade-enter-active {
+    opacity: 1;
+    transition: opacity 200ms;
+  }
+  
+  .fade-exit {
+    opacity: 1;
+  }
+  
+  .fade-exit-active {
+    opacity: 0;
+    transition: opacity 200ms;
+  }
