@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
-import ProgressBar from "react-animated-progress-bar";
+// import ProgressBar from "react-animated-progress-bar";
 import { motion } from "framer-motion";
 
 const frontend = [
@@ -48,6 +48,16 @@ const backend = [
 ];
 const Expertise = () => {
   const [expert, setExpert] = useState("design");
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      if (progress < 100) {
+        setProgress(progress + 1);
+      }
+    }, 100);
+    return () => clearInterval(intervalId);
+  }, [progress]);
 
   return (
     <section className="flex flex-col mt-20 md:mt-0 md:flex-row justify-center h-full items-center lg:h-screen bg-secondary w-full">
@@ -98,76 +108,49 @@ const Expertise = () => {
               Backend
             </button>
           </div>
-          <div className="basis-3/5 ">
+          <div className="basis-3/5 space-y-2">
             {expert == "design"
               ? design.map((link, ind) => (
                   <>
-                    <h1 className="-mb-6">{link.title}</h1>
-                    <ProgressBar
-                      width="auto"
-                      height="12px"
-                      rect
-                      fontColor="gray"
-                      percentage={link.percent}
-                      rectPadding="1px"
-                      rectBorderRadius="20px"
-                      trackPathColor="#E9ECEF"
-                      trackBorderColor="white"
-                      defColor={{
-                        fair: "#E54B4B",
-                        good: "#E54B4B",
-                        excellent: "#E54B4B",
-                        poor: "#E54B4B",
-                      }}
-                    />
+                    <div className="text-xs text-gray-500 text-right">{`${link.title}%`}</div>
+                    <div className="w-full h-4 rounded-lg bg-gray-300 overflow-hidden">
+                      <motion.div
+                        initial={{ width: 0 }}
+                        animate={{ width: `${link.percent}%` }}
+                        transition={{ type: "spring", duration: 2 }}
+                        className="h-full bg-light-primary"
+                      />
+                    </div>
                   </>
                 ))
               : null}
             {expert == "frontend"
               ? frontend.map((link, ind) => (
                   <>
-                    <h1 className="-mb-6">{link.title}</h1>
-                    <ProgressBar
-                      width="auto"
-                      height="12px"
-                      rect
-                      fontColor="gray"
-                      percentage={link.percent}
-                      rectPadding="1px"
-                      rectBorderRadius="20px"
-                      trackPathColor="#E9ECEF"
-                      trackBorderColor="white"
-                      defColor={{
-                        fair: "#E54B4B",
-                        good: "#E54B4B",
-                        excellent: "#E54B4B",
-                        poor: "#E54B4B",
-                      }}
-                    />
+                    <div className="text-xs text-gray-500 text-right">{`${link.title}%`}</div>
+                    <div className="w-full h-4 rounded-lg bg-gray-300 overflow-hidden">
+                      <motion.div
+                        initial={{ width: 0 }}
+                        animate={{ width: `${link.percent}%` }}
+                        transition={{ type: "spring", duration: 2 }}
+                        className="h-full bg-light-primary"
+                      />
+                    </div>
                   </>
                 ))
               : null}
             {expert == "backend"
               ? backend.map((link, ind) => (
                   <>
-                    <h1 className="-mb-6">{link.title}</h1>
-                    <ProgressBar
-                      width="auto"
-                      height="12px"
-                      rect
-                      fontColor="gray"
-                      percentage={link.percent}
-                      rectPadding="1px"
-                      rectBorderRadius="20px"
-                      trackPathColor="#E9ECEF"
-                      trackBorderColor="white"
-                      defColor={{
-                        fair: "#E54B4B",
-                        good: "#E54B4B",
-                        excellent: "#E54B4B",
-                        poor: "#E54B4B",
-                      }}
-                    />
+                    <div className="text-xs text-gray-500 text-right">{`${link.title}%`}</div>
+                    <div className="w-full h-4 rounded-lg bg-gray-300 overflow-hidden">
+                      <motion.div
+                        initial={{ width: 0 }}
+                        animate={{ width: `${link.percent}%` }}
+                        transition={{ type: "spring", duration: 2 }}
+                        className="h-full bg-light-primary"
+                      />
+                    </div>
                   </>
                 ))
               : null}
@@ -179,3 +162,76 @@ const Expertise = () => {
 };
 
 export default Expertise;
+
+// {expert == "design"
+//               ? design.map((link, ind) => (
+//                   <>
+//                     <h1 className="-mb-6">{link.title}</h1>
+//                     <ProgressBar
+//                       width="auto"
+//                       height="12px"
+//                       rect
+//                       fontColor="gray"
+//                       percentage={link.percent}
+//                       rectPadding="1px"
+//                       rectBorderRadius="20px"
+//                       trackPathColor="#E9ECEF"
+//                       trackBorderColor="white"
+//                       defColor={{
+//                         fair: "#E54B4B",
+//                         good: "#E54B4B",
+//                         excellent: "#E54B4B",
+//                         poor: "#E54B4B",
+//                       }}
+//                     />
+//                   </>
+//                 ))
+//               : null}
+//             {expert == "frontend"
+//               ? frontend.map((link, ind) => (
+//                   <>
+//                     <h1 className="-mb-6">{link.title}</h1>
+//                     <ProgressBar
+//                       width="auto"
+//                       height="12px"
+//                       rect
+//                       fontColor="gray"
+//                       percentage={link.percent}
+//                       rectPadding="1px"
+//                       rectBorderRadius="20px"
+//                       trackPathColor="#E9ECEF"
+//                       trackBorderColor="white"
+//                       defColor={{
+//                         fair: "#E54B4B",
+//                         good: "#E54B4B",
+//                         excellent: "#E54B4B",
+//                         poor: "#E54B4B",
+//                       }}
+//                     />
+//                   </>
+//                 ))
+//               : null}
+//             {expert == "backend"
+//               ? backend.map((link, ind) => (
+//                   <>
+//                     <h1 className="-mb-6">{link.title}</h1>
+//                     <ProgressBar
+//                       width="auto"
+//                       height="12px"
+//                       rect
+//                       fontColor="gray"
+//                       percentage={link.percent}
+//                       rectPadding="1px"
+//                       rectBorderRadius="20px"
+//                       trackPathColor="#E9ECEF"
+//                       trackBorderColor="white"
+//                       defColor={{
+//                         fair: "#E54B4B",
+//                         good: "#E54B4B",
+//                         excellent: "#E54B4B",
+//                         poor: "#E54B4B",
+//                       }}
+//                     />
+//                   </>
+//                 ))
+//               : null}
