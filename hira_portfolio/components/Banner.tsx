@@ -79,7 +79,7 @@ const Banner = () => {
   );
 };
 
-// export default Banner;
+export default Banner;
 // .typewriter h1 {
 //   overflow: hidden;
 //   white-space: nowrap;
