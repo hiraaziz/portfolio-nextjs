@@ -68,9 +68,7 @@ const Banner = () => {
           justify-between self-center translate-y-6  backdrop-blur-lg  lg:-translate-x-72 lg:mt-72
           bg-white/40 rounded-lg p-4 tracking-widest z-20 text-text"
         >
-          <h1 className="text-xl font-medium">
-            I'm Professional Web Developer
-          </h1>
+          <h1 className="text-xl font-medium">Im Professional Web Developer</h1>
           <p className="font-extralight">
             Obviously I'm a Web Designer. Web Developer with over 3 years of
             experience.
