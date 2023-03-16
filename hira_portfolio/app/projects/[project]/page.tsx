@@ -14,13 +14,7 @@ export function generateStaticParams() {
     { project: "todo" },
   ];
 }
-const Page = ({
-  params,
-  searchParams,
-}: {
-  params: { project: string };
-  searchParams: { id: string };
-}) => {
+const Page = ({ params }: { params: { project: string } }) => {
   const [data, setdata] = useState<projectTypes>(projectdata[0]);
   useEffect(() => {
     if (params.project == "panaverse") {
