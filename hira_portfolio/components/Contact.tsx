@@ -24,7 +24,7 @@ const Contact = () => {
         transition={{ type: spring, duration: 1.5 }}
         className="text-md font-normal text-textlight max-w-[80%] lg:max-w-[600px] text-center mb-20"
       >
-        Obviously I'm a Web Designer. Experienced with all stages of the
+        Obviously Im a Web Designer. Experienced with all stages of the
         development cycle for dynamic web projects.
       </motion.p>
 
