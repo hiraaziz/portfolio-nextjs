@@ -9,8 +9,8 @@ export default function Nav({ background }: any) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const { y } = useWindowScroll();
-  const [shadow, setshadow] = useState("shadow-none");
-  const [bgColor, setBgColor] = useState("transparent");
+  const [shadow, setshadow] = useState<string>("shadow-none");
+  const [bgColor, setBgColor] = useState<string>("transparent");
 
   useEffect(() => {
     if (y > 100) {
@@ -25,8 +25,11 @@ export default function Nav({ background }: any) {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
-
-  const navlinks = [
+  type navtypes = {
+    title: string;
+    link: string;
+  };
+  const navlinks: navtypes[] = [
     {
       title: "HOME",
       link: "/",
@@ -58,7 +61,7 @@ export default function Nav({ background }: any) {
           </h1>
 
           <div className="flex basis-1/3 list-none justify-evenly ">
-            {navlinks.map((nav, ind) => (
+            {navlinks.map((nav: navtypes, ind) => (
               <Link href={nav.link} key={ind}>
                 <li
                   key={ind}
@@ -147,7 +150,7 @@ export default function Nav({ background }: any) {
       >
         <CSSTransition in={menuOpen} timeout={2000} classNames="fade">
           <div className="list-none h-fit py-2 m-auto w-900  bg-[#ffdada] rounded-lg">
-            {navlinks.map((nav, ind) => (
+            {navlinks.map((nav: navtypes, ind) => (
               <li
                 key={ind}
                 className="basis-1/12 border-b-2 border-transparent text-center cursor-pointer
