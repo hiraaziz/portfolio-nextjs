@@ -89,7 +89,7 @@ const Expertise = () => {
           </div>
           <div className="basis-3/5 space-y-2">
             {expert == "design"
-              ? design.map((link, ind) => (
+              ? design.map((link: expertiseType, ind: number) => (
                   <>
                     <div className="text-xs text-gray-500 text-right">{`${link.title}%`}</div>
                     <div className="w-full h-4 rounded-lg bg-gray-300 overflow-hidden">
@@ -104,7 +104,7 @@ const Expertise = () => {
                 ))
               : null}
             {expert == "frontend"
-              ? frontend.map((link, ind) => (
+              ? frontend.map((link: expertiseType, ind: number) => (
                   <>
                     <div className="text-xs text-gray-500 text-right">{`${link.title}%`}</div>
                     <div className="w-full h-4 rounded-lg bg-gray-300 overflow-hidden">
@@ -119,7 +119,7 @@ const Expertise = () => {
                 ))
               : null}
             {expert == "backend"
-              ? backend.map((link, ind) => (
+              ? backend.map((link: expertiseType, ind: number) => (
                   <>
                     <div className="text-xs text-gray-500 text-right">{`${link.title}%`}</div>
                     <div className="w-full h-4 rounded-lg bg-gray-300 overflow-hidden">
