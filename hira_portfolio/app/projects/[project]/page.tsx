@@ -37,7 +37,7 @@ const Page = ({
       setdata(projectdata[5]);
     }
     console.log(data);
-  });
+  }, [data]);
 
   return (
     <div
