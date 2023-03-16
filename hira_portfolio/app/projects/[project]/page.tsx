@@ -14,7 +14,7 @@ export function generateStaticParams() {
     { project: "todo" },
   ];
 }
-const page = ({
+const Page = ({
   params,
   searchParams,
 }: {
@@ -97,4 +97,4 @@ const page = ({
   );
 };
 
-export default page;
+export default Page;
