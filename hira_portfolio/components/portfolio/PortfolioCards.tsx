@@ -90,6 +90,7 @@ const PortfolioCards = ({ option }: any) => {
       <div className="flex flex-wrap justify-center items-center w-800 h-full ">
         {data.map((data, ind) => (
           <motion.div
+            key={ind}
             className=" flex flex-col justify-self-center self-center shadow-lg mt-10 mr-10
             hover:scale-110 transition-all duration-300 hover:shadow-2xl overflow-hidden"
           >
