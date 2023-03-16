@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { BsToggle2Off, BsToggle2On } from "react-icons/bs";
 
 function ThemeSwitcher({ children }: { children: React.ReactNode }) {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
 
   function toggleMode() {
     setIsDarkMode(!isDarkMode);
