@@ -1,6 +1,7 @@
 import ThemeSwitcher from "@/components/ThemeSwitcher";
 import "./globals.css";
 import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 
 export default function RootLayout({
   children,
@@ -10,10 +11,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head />
-      <body className="font-monserrat">
+      <body className="font-poppins">
         <ThemeSwitcher>
-          <Nav />
           {children}
+          <Footer />
         </ThemeSwitcher>
       </body>
     </html>

@@ -33,19 +33,24 @@ const Banner = () => {
           H
         </div>
         <div className=" md:basis-1/3 mt-40 lg:ml-14 xl:translate-x-0  flex justify-center items-end">
+          {/* <motion.div
+            animate={{ y: [0, -20, 0] }}
+            transition={{ duration: 2, ease: "easeInOut", repeat: Infinity }}
+          > */}
           <Image
             src={"/pic10.png"}
             alt="pic"
             width={600}
             height={600}
-            className="absolute z-10"
+            className="absolute z-10 object-cover"
           />
+
           <Image
             src={"/image2rm.png"}
             alt="pic"
             width={400}
             height={400}
-            className="hidden md:block absolute z-20 translate-x-48 -translate-y-80"
+            className="hidden md:block absolute z-20 translate-x-48 -translate-y-80 object-cover"
           />
 
           <div

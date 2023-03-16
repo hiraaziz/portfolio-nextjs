@@ -1,59 +1,74 @@
 "use client";
+import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 import { AiFillFacebook, AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import { CSSTransition } from "react-transition-group";
+import { useWindowScroll } from "react-use";
 
-export default function Nav() {
+export default function Nav({ background }: any) {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // const [navbarShadow, setNavbarShadow] = useState(false);
+  const { y } = useWindowScroll();
+  const [shadow, setshadow] = useState("shadow-none");
+  const [bgColor, setBgColor] = useState("transparent");
 
-  // useEffect(() => {
-  //   window.addEventListener("scroll", () => {
-  //     setNavbarShadow(window.scrollY > 0);
-  //   });
-
-  //   return () => {
-  //     window.removeEventListener("scroll", () => {});
-  //   };
-  // }, [navbarShadow]);
+  useEffect(() => {
+    if (y > 100) {
+      setshadow("shadow-md");
+      setBgColor("white");
+    } else {
+      setshadow("shadow-none");
+      setBgColor("transparent");
+    }
+  }, [y]);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
   const navlinks = [
-    "HOME",
-    "SERVICES",
-    "RESUME",
-    "PROJECTS",
-    "BLOG",
-    "CONTACT",
-    "PAGES",
+    {
+      title: "HOME",
+      link: "/",
+    },
+    {
+      title: "SERVICES",
+      link: "/",
+    },
+    {
+      title: "PROJECTS",
+      link: "/projects",
+    },
+    {
+      title: "BLOG",
+      link: "/",
+    },
+    {
+      title: "CONTACT",
+      link: "/",
+    },
   ];
 
   return (
-    <nav
-      className={`${
-        true ? "shadow-sm" : "shadow-none"
-      } w-full fixed bg-primarylight z-40`}
-    >
-      <div className="h-14 md:h-20">
+    <nav className={`w-full fixed bg-${background} ${shadow} snap-y z-40`}>
+      <div className={`h-14 md:h-20 bg bg-${bgColor}`}>
         <div className="hidden md:flex justify-evenly items-center h-full w-full ">
           <h1 className=" basis-1/4 w-full text-center text-text text-2xl">
             Hira.
           </h1>
 
-          <div className="flex basis-1/2 list-none justify-evenly ">
+          <div className="flex basis-1/3 list-none justify-evenly ">
             {navlinks.map((nav, ind) => (
-              <li
-                key={ind}
-                className="basis-1/12 border-b-2 border-transparent text-center cursor-pointer
-               hover:border-dark-primary hover:basis-2/12 transition-all duration-200 
+              <Link href={nav.link} key={ind}>
+                <li
+                  key={ind}
+                  className="basis-1/6 border-b-2 border-transparent text-center cursor-pointer
+               hover:border-dark-primary transition-all duration-200 
                lg:text-[13px] md:text-[9px] text-textlight font-semibold tracking-widest "
-              >
-                {nav}
-              </li>
+                >
+                  {nav.title}
+                </li>
+              </Link>
             ))}
           </div>
 
@@ -139,7 +154,9 @@ export default function Nav() {
                hover:border-dark-primary hover:basis-2/12 transition-all duration-200 
                text-[13px] text-slate-600 font-semibold tracking-widest"
               >
-                {nav}
+                <Link href={nav.link} key={ind}>
+                  {nav.title}
+                </Link>
               </li>
             ))}
           </div>

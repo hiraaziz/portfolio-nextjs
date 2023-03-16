@@ -13,7 +13,7 @@ function ThemeSwitcher({ children }: { children: React.ReactNode }) {
     <div className={isDarkMode ? "dark" : "light"}>
       <button
         onClick={toggleMode}
-        className=" fixed z-50 ml-[80%] lg:mt-[22px] sm:mt-[4px] border-2 border-text p-2 rounded-xl text-text"
+        className=" fixed z-50 translate-y-20 border-2 border-text p-2 rounded-xl text-text"
       >
         {isDarkMode ? <BsToggle2On /> : <BsToggle2Off />}
       </button>
