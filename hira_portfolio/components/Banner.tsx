@@ -70,7 +70,7 @@ const Banner = () => {
         >
           <h1 className="text-xl font-medium">Im Professional Web Developer</h1>
           <p className="font-extralight">
-            Obviously I'm a Web Designer. Web Developer with over 3 years of
+            Obviously Im a Web Designer. Web Developer with over 3 years of
             experience.
           </p>
           <button className="bg-light-primary hover:bg-[#be2e2e] px-4 py-2 rounded-lg w-32 text-white">
