@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="text-[#C6C9CE] flex flex-col justify-center items-center w-full h-full">
         <h1 className="2xl font-semibold -translate-y-12">HIRA.</h1>
         <p className="md font-medium -translate-y-12 max-w-md text-center">
-          Obviously I'm a Web Designer. Experienced with all stages of the
+          Obviously Im a Web Designer. Experienced with all stages of the
           development cycle for dynamic web projects.
         </p>
         <div className="border-t-2 border-slate-500 w-full text-center mt-5 translate-y-16 py-4">
