@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <section className="bg-[#3C4858] relative h-72">
+    <section className=" bg-[#3C4858] relative h-72">
       <div className="text-[#C6C9CE] flex flex-col justify-center items-center w-full h-full">
         <h1 className="2xl font-semibold -translate-y-12">HIRA.</h1>
         <p className="md font-medium -translate-y-12 max-w-md text-center">

@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const page = () => {
   return (
-    <div className="mt-20">
+    <div className="mt-20 mb-10">
       <PortfolioCards option={"all"} />
     </div>
   );

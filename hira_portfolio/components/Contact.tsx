@@ -8,7 +8,7 @@ import { motion, spring } from "framer-motion";
 
 const Contact = () => {
   return (
-    <div className="flex flex-col justify-center items-center h-screen">
+    <div className="flex flex-col justify-center items-center h-screen mt-32 md:mt-0 mb-28 md:mb-0">
       <motion.h1
         initial={{ opacity: 0, x: -30 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -28,7 +28,7 @@ const Contact = () => {
         development cycle for dynamic web projects.
       </motion.p>
 
-      <div className="flex justify-evenly w-full">
+      <div className="flex flex-col md:flex-row md:justify-evenly items-center w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

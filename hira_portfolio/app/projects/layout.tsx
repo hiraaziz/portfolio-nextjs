@@ -7,17 +7,14 @@ const layout = ({ children }: { children: React.ReactNode }) => {
     <>
       <Nav background={"tranparent"} />
       <div className="bg-secondary">
-        <div className=" relative w-full h-[400px] overflow-hidden">
+        <div className="relative w-full h-[200px] md:h-[400px] overflow-hidden">
           <Image
-            src={"/bg-portfolio.jpg"}
+            src={"/bg-portfolio.png"}
             alt="bg-portfolio"
             width={1200}
             height={200}
-            className="absolute w-full"
+            className="absolute w-full object-cover "
           />
-          <div className=" flex justify-center items-center w-full z-20 h-full absolute bg-secondary opacity-50">
-            Portfolio
-          </div>
         </div>
         <div>{children}</div>
       </div>

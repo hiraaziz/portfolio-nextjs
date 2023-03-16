@@ -42,7 +42,7 @@ const PortfolioCards = ({ option }: any) => {
   }
   return (
     <section className="bg-backgroundtwo  flex flex-col items-center w-full h-full relative mt-28 lg:mt-0 ">
-      <div className="flex space-x-2  text-sm ">
+      <div className="flex space-x-2 text-sm flex-wrap">
         {option == "all" ? (
           <button
             onClick={() => setPortfolios("all")}
