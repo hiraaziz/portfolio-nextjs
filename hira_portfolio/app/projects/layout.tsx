@@ -2,16 +2,15 @@
 import Contact from "@/components/Contact";
 import Nav from "@/components/Nav";
 import Image from "next/image";
-import React, { useRef } from "react";
-
+import React, { useRef, useContext } from "react";
+import { Navwrapper } from "@/components/Navwrapper";
+import { Navcontext } from "@/components/Contextapi";
 const layout = ({ children }: { children: React.ReactNode }) => {
-  const expertiseRef = useRef<HTMLDivElement>(null);
-  const contactRef = useRef<HTMLDivElement>(null);
-  const servicesRef = useRef<HTMLDivElement>(null);
+  const { expertiseRef, contactRef, servicesRef } = useContext(Navcontext);
   return (
     <>
       <Nav
-        background={"transparent"}
+        background={"primarylight"}
         scrolexp={expertiseRef}
         scrolcontact={contactRef}
         scrolservice={servicesRef}
@@ -27,7 +26,6 @@ const layout = ({ children }: { children: React.ReactNode }) => {
           />
         </div>
         <div>{children}</div>
-        <Contact scrol={contactRef} />
       </div>
     </>
   );
