@@ -2,19 +2,13 @@
 import Contact from "@/components/Contact";
 import Nav from "@/components/Nav";
 import Image from "next/image";
-import React, { useRef, useContext } from "react";
+import React, { useRef } from "react";
 import { Navwrapper } from "@/components/Navwrapper";
-import { Navcontext } from "@/components/Contextapi";
+
 const layout = ({ children }: { children: React.ReactNode }) => {
-  const { expertiseRef, contactRef, servicesRef } = useContext(Navcontext);
   return (
     <>
-      <Nav
-        background={"primarylight"}
-        scrolexp={expertiseRef}
-        scrolcontact={contactRef}
-        scrolservice={servicesRef}
-      />
+      <Navwrapper background={"transparent"} />
       <div className="bg-secondary">
         <div className="relative w-full h-[200px] md:h-[400px] overflow-hidden">
           <Image
