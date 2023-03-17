@@ -94,7 +94,7 @@ const PortfolioCards = ({ option }: any) => {
             className=" flex flex-col justify-self-center self-center shadow-lg mt-10 mr-10
             hover:scale-110 transition-all duration-300 hover:shadow-2xl overflow-hidden"
           >
-            <div key={ind} className="w-full h-[300px]">
+            <div key={ind} className="w-full h-[300px] bg-white">
               <Image
                 src={data.img}
                 alt="img"
@@ -104,9 +104,9 @@ const PortfolioCards = ({ option }: any) => {
               />
             </div>
 
-            <div className="bg-white z-10 px-6rounded-b-md py-4 text-slate-600 tracking-widest flex flex-col justify-center items-center ">
+            <div className="bg-white z-10 px-6 rounded-b-md py-4 text-slate-600 tracking-widest flex flex-col justify-center items-center ">
               <Link href={data.routelink}>
-                <h1 className="text-xl cursor-pointer">{data.title}</h1>
+                <h1 className="text-xl cursor-pointer ">{data.title}</h1>
               </Link>
               <p className="text-sm py-2">{data.type}</p>
             </div>

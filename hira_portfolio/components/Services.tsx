@@ -9,7 +9,7 @@ const Services = ({ scrol }: { scrol: React.LegacyRef<HTMLDivElement> }) => {
   return (
     <section
       ref={scrol}
-      className="bg-backgroundtwo mt-20 flex flex-col items-center justify-center w-full h-[160vh] md:h-screen "
+      className="relative bg-backgroundtwo mt-20  flex flex-col items-center justify-center w-full h-[160vh] md:h-screen "
     >
       <motion.h1
         initial={{ opacity: 0, x: -30 }}

@@ -35,8 +35,8 @@ const Page = ({ params }: { params: { project: string } }) => {
 
   return (
     <div
-      className="relative h-[100vh] w-full flex flex-col justify-start  md:flex-row md:items-start
-     md:justify-center mt-20 mb-[450px] md:mb-0"
+      className="relative min-h-[100vh] w-full flex flex-col justify-start  md:flex-row md:items-start
+     md:justify-center mt-20 pb-[100px] md:pb-0"
     >
       <motion.div
         initial={{ opacity: 0, x: -50 }}

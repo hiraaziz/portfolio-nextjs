@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { AiFillFacebook, AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import { CSSTransition } from "react-transition-group";
 import { useWindowScroll } from "react-use";
@@ -71,7 +71,7 @@ export default function Nav({
     <nav className={`w-full fixed bg-${background} ${shadow} snap-y z-40`}>
       <div className={`h-14 md:h-20 bg bg-${bgColor}`}>
         <div className="hidden md:flex justify-evenly items-center h-full w-full ">
-          <h1 className=" basis-1/4 w-full text-center text-text text-2xl">
+          <h1 className=" basis-1/4 w-full text-center text-black text-2xl">
             Hira.
           </h1>
 
@@ -198,6 +198,29 @@ export default function Nav({
                 </Link>
               </li>
             ))}
+            <div className="flex flex-col">
+              {scrollinks.map((nav, ind) => (
+                <button
+                  onClick={() =>
+                    nav.link.current?.scrollIntoView({
+                      block: "start",
+                      inline: "start",
+                      behavior: "smooth",
+                    })
+                  }
+                  key={ind}
+                >
+                  <li
+                    key={ind}
+                    className=" basis-1/12 border-b-2 border-transparent text-center cursor-pointer
+                  hover:border-dark-primary hover:basis-2/12 transition-all duration-200 
+                  text-[13px] text-slate-600 font-semibold tracking-widest"
+                  >
+                    {nav.title}
+                  </li>
+                </button>
+              ))}
+            </div>
           </div>
         </CSSTransition>
       </div>

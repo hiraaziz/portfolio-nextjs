@@ -10,7 +10,7 @@ const Contact = ({ scrol }: { scrol: React.LegacyRef<HTMLDivElement> }) => {
   return (
     <div
       ref={scrol}
-      className="flex flex-col justify-center items-center h-screen mt-32 md:mt-0 mb-28 md:mb-0"
+      className="relative flex flex-col justify-center items-center h-screen mt-60 md:mt-0 pb-64 md:pb-0"
     >
       <motion.h1
         initial={{ opacity: 0, x: -30 }}
