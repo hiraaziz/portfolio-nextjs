@@ -1,11 +1,11 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef, useContext } from "react";
 import Nav from "./Nav";
+import { Navcontext } from "./Contextapi";
 
 export const Navwrapper = ({ background }: { background: string }) => {
-  const expertiseRef = useRef<HTMLDivElement>(null);
-  const contactRef = useRef<HTMLDivElement>(null);
-  const servicesRef = useRef<HTMLDivElement>(null);
+  const { expertiseRef, contactRef, servicesRef } = useContext(Navcontext);
+
   return (
     <Nav
       background={background}
