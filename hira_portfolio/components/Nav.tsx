@@ -62,7 +62,7 @@ export default function Nav({
       link: scrolservice,
     },
     {
-      title: "CONTACT",
+      title: "CONTACTs",
       link: scrolcontact,
     },
   ];
