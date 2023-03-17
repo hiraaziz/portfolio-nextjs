@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { motion, spring } from "framer-motion";
 import { frontend, backend, design, expertiseType } from "./constant";
 
-const Expertise = () => {
+const Expertise = ({ scrol }: { scrol: React.LegacyRef<HTMLDivElement> }) => {
   const [expert, setExpert] = useState<string>("design");
   const [progress, setProgress] = useState<number>(0);
 
@@ -18,7 +18,10 @@ const Expertise = () => {
   }, [progress]);
 
   return (
-    <section className="flex flex-col mt-20 md:mt-0 md:flex-row justify-center h-full items-center lg:h-screen bg-secondary w-full">
+    <section
+      ref={scrol}
+      className="flex flex-col mt-20 md:mt-0 md:flex-row justify-center h-full items-center lg:h-screen bg-secondary w-full"
+    >
       <motion.div
         initial={{ opacity: 0, x: -30 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -91,7 +94,10 @@ const Expertise = () => {
             {expert == "design"
               ? design.map((link: expertiseType, ind: number) => (
                   <>
-                    <div className="text-xs text-gray-500 text-right">{`${link.title}%`}</div>
+                    <div
+                      key={ind}
+                      className="text-xs text-gray-500 text-right"
+                    >{`${link.title}%`}</div>
                     <div className="w-full h-4 rounded-lg bg-gray-300 overflow-hidden">
                       <motion.div
                         initial={{ width: 0 }}
@@ -106,7 +112,10 @@ const Expertise = () => {
             {expert == "frontend"
               ? frontend.map((link: expertiseType, ind: number) => (
                   <>
-                    <div className="text-xs text-gray-500 text-right">{`${link.title}%`}</div>
+                    <div
+                      key={ind}
+                      className="text-xs text-gray-500 text-right"
+                    >{`${link.title}%`}</div>
                     <div className="w-full h-4 rounded-lg bg-gray-300 overflow-hidden">
                       <motion.div
                         initial={{ width: 0 }}
@@ -121,7 +130,10 @@ const Expertise = () => {
             {expert == "backend"
               ? backend.map((link: expertiseType, ind: number) => (
                   <>
-                    <div className="text-xs text-gray-500 text-right">{`${link.title}%`}</div>
+                    <div
+                      key={ind}
+                      className="text-xs text-gray-500 text-right"
+                    >{`${link.title}%`}</div>
                     <div className="w-full h-4 rounded-lg bg-gray-300 overflow-hidden">
                       <motion.div
                         initial={{ width: 0 }}

@@ -6,9 +6,12 @@ import { AiOutlineMail } from "react-icons/ai";
 import { CiLocationOn } from "react-icons/ci";
 import { motion, spring } from "framer-motion";
 
-const Contact = () => {
+const Contact = ({ scrol }: { scrol: React.LegacyRef<HTMLDivElement> }) => {
   return (
-    <div className="flex flex-col justify-center items-center h-screen mt-32 md:mt-0 mb-28 md:mb-0">
+    <div
+      ref={scrol}
+      className="flex flex-col justify-center items-center h-screen mt-32 md:mt-0 mb-28 md:mb-0"
+    >
       <motion.h1
         initial={{ opacity: 0, x: -30 }}
         whileInView={{ opacity: 1, x: 0 }}

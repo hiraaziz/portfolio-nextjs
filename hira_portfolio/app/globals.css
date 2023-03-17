@@ -7,7 +7,7 @@
     --primary-color: #E54B4B;
     --primarylight-color: #FEF6F6;
     --secondary-color: #FFFFFF;
-    --bagroundtwo-color:#F9FAFD;
+    --secondarylight-color:#F9FAFD;
     --textlight-color: #727272;
     --text-color: #1A1A1A;
    
@@ -17,7 +17,7 @@
     --primary-color: #ffa8a8;
     --primarylight-color: #211F2F;
     --secondary-color: #211F2F;
-    --backgroundtwo-color:#211F2F;
+    --secondarylight-color:#211F2F;
     --textlight-color: #ffa8a8;
     --text-color: #F7FAFC;
     
@@ -33,7 +33,7 @@
     background-color: var(--secondary-color);
   }
   .bg-backgroundtwo {
-    background-color: var(--backgroundtwo-color);
+    background-color: var(--secondarylight-color);
   }
   
   .text-textlight {

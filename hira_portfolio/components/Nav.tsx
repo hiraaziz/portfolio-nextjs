@@ -5,7 +5,19 @@ import { AiFillFacebook, AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import { CSSTransition } from "react-transition-group";
 import { useWindowScroll } from "react-use";
 
-export default function Nav({ background }: any) {
+type navpropsType = {
+  background: string;
+  scrolexp: React.RefObject<HTMLDivElement>;
+  scrolcontact: React.RefObject<HTMLDivElement>;
+  scrolservice: React.RefObject<HTMLDivElement>;
+};
+
+export default function Nav({
+  background,
+  scrolexp,
+  scrolcontact,
+  scrolservice,
+}: navpropsType) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const { y } = useWindowScroll();
@@ -35,20 +47,23 @@ export default function Nav({ background }: any) {
       link: "/",
     },
     {
-      title: "SERVICES",
-      link: "/",
-    },
-    {
       title: "PROJECTS",
       link: "/projects",
     },
+  ];
+  const scrollinks = [
     {
-      title: "BLOG",
-      link: "/",
+      title: "EXPERTISE",
+      link: scrolexp,
+    },
+
+    {
+      title: "SERVICES",
+      link: scrolservice,
     },
     {
       title: "CONTACT",
-      link: "/",
+      link: scrolcontact,
     },
   ];
 
@@ -73,6 +88,27 @@ export default function Nav({ background }: any) {
                 </li>
               </Link>
             ))}
+            {scrollinks.map((nav, ind) => (
+              <button
+                onClick={() =>
+                  nav.link.current?.scrollIntoView({
+                    block: "start",
+                    inline: "start",
+                    behavior: "smooth",
+                  })
+                }
+                key={ind}
+              >
+                <li
+                  key={ind}
+                  className="basis-1/6 border-b-2 border-transparent text-center cursor-pointer
+               hover:border-dark-primary transition-all duration-200 
+               lg:text-[13px] md:text-[9px] text-textlight font-semibold tracking-widest "
+                >
+                  {nav.title}
+                </li>
+              </button>
+            ))}
           </div>
 
           <div className="flex basis-1/4 justify-center space-x-1 text-textlight">
@@ -84,13 +120,13 @@ export default function Nav({ background }: any) {
             </a>
             <a
               className="border-2 border-text p-2 rounded-xl hover:bg-light-primary hover:border-light-primary hover:text-white"
-              href="#"
+              href="https://www.linkedin.com/in/hira-a-3b9325169/"
             >
               <AiFillLinkedin className="w-4 h-4" />
             </a>
             <a
               className="border-2 border-text p-2 rounded-xl hover:bg-light-primary hover:border-light-primary hover:text-white"
-              href="#"
+              href="https://github.com/hiraaziz?tab=repositories"
             >
               <AiFillGithub className="w-4 h-4" />
             </a>

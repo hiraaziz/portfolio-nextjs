@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -8,7 +8,7 @@ import PortfolioCards from "./PortfolioCards";
 
 const Portfolio = () => {
   return (
-    <section className="bg-backgroundtwo  flex flex-col items-center w-full h-full relative mt-28 lg:mt-0 ">
+    <section className=" flex flex-col items-center w-full h-full relative mt-28 lg:mt-0 ">
       <motion.h1
         initial={{ opacity: 0, x: -30 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -31,7 +31,7 @@ const Portfolio = () => {
       <Link href="/projects">
         <button
           className="flex justify-evenly mt-20 text-[#E54B4B] border border-1 border-[#E54B4B] py-2  
-      rounded-md w-40 hover:bg-[#E54B4B] hover:text-white hover:shadow-md hover:shadow-[#ffb1b1]
+      rounded-md w-40 hover:bg-[#E54B4B] hover:text-white hover:shadow-lg hover:shadow-[#ffb1b1]
       transition-all duration-200"
         >
           View More

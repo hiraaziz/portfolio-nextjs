@@ -33,10 +33,6 @@ const Banner = () => {
           H
         </div>
         <div className=" md:basis-1/3 mt-40 lg:ml-14 xl:translate-x-0  flex justify-center items-end">
-          {/* <motion.div
-            animate={{ y: [0, -20, 0] }}
-            transition={{ duration: 2, ease: "easeInOut", repeat: Infinity }}
-          > */}
           <Image
             src={"/pic10.png"}
             alt="pic"
