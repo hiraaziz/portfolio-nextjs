@@ -1,19 +1,20 @@
 "use client";
-import React, { useContext } from "react";
+import React, { useRef } from "react";
 import Banner from "@/components/Banner";
 import Expertise from "@/components/expertise/Expertise";
 import Portfolio from "@/components/portfolio/Portfolio";
 import Contact from "@/components/Contact";
 import Nav from "@/components/Nav";
 import Services from "@/components/Services";
-import Contextapi, { Navcontext } from "@/components/Contextapi";
 
 type scrolType = {
   title: string;
   link: React.RefObject<HTMLDivElement>;
 };
 export default function Home() {
-  const { expertiseRef, contactRef, servicesRef } = useContext(Navcontext);
+  const expertiseRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
+  const servicesRef = useRef<HTMLDivElement>(null);
   const scrollinks: scrolType[] = [
     {
       title: "EXPERTISE",
