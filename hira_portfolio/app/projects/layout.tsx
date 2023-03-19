@@ -5,10 +5,29 @@ import Image from "next/image";
 import React, { useRef } from "react";
 import { Navwrapper } from "@/components/Navwrapper";
 
+type scrolType = {
+  title: string;
+  link: string;
+};
 const layout = ({ children }: { children: React.ReactNode }) => {
+  const scrollinks: scrolType[] = [
+    {
+      title: "EXPERTISE",
+      link: "/",
+    },
+
+    {
+      title: "SERVICES",
+      link: "/",
+    },
+    {
+      title: "CONTACT",
+      link: "/",
+    },
+  ];
   return (
     <>
-      <Navwrapper background={"transparent"} />
+      <Nav background={"transparent"} scrollink={scrollinks} />
       <div className="bg-secondary">
         <div className="relative w-full h-[200px] md:h-[400px] overflow-hidden">
           <Image
