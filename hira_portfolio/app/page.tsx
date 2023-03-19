@@ -11,25 +11,21 @@ import Contextapi, { Navcontext } from "@/components/Contextapi";
 
 export default function Home() {
   const { expertiseRef, contactRef, servicesRef } = useContext(Navcontext);
-  // const expertiseRef = useRef<HTMLDivElement>(null);
-  // const contactRef = useRef<HTMLDivElement>(null);
-  // const servicesRef = useRef<HTMLDivElement>(null);
+
   return (
     <div className=" bg-secondary">
-      <Contextapi>
-        <Nav
-          background={"primarylight"}
-          scrolexp={expertiseRef}
-          scrolcontact={contactRef}
-          scrolservice={servicesRef}
-        />
+      <Nav
+        background={"primarylight"}
+        scrolexp={expertiseRef}
+        scrolcontact={contactRef}
+        scrolservice={servicesRef}
+      />
 
-        <Banner />
-        <Expertise scrol={expertiseRef} />
-        <Portfolio />
-        <Services scrol={servicesRef} />
-        <Contact scrol={contactRef} />
-      </Contextapi>
+      <Banner />
+      <Expertise scrol={expertiseRef} />
+      <Portfolio />
+      <Services scrol={servicesRef} />
+      <Contact scrol={contactRef} />
     </div>
   );
 }
