@@ -1,4 +1,5 @@
 "use client";
+import { RefObject } from "react";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { AiFillFacebook, AiFillLinkedin, AiFillGithub } from "react-icons/ai";
@@ -7,16 +8,20 @@ import { useWindowScroll } from "react-use";
 
 type navpropsType = {
   background: string;
-  scrolexp: React.RefObject<HTMLDivElement>;
-  scrolcontact: React.RefObject<HTMLDivElement>;
-  scrolservice: React.RefObject<HTMLDivElement>;
+  scrollinks?: {
+    title: string;
+    link: RefObject<HTMLDivElement>;
+  }[];
+  scrollink?: {
+    title: string;
+    link: string;
+  }[];
 };
 
 export default function Nav({
   background,
-  scrolexp,
-  scrolcontact,
-  scrolservice,
+  scrollinks,
+  scrollink,
 }: navpropsType) {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -51,21 +56,6 @@ export default function Nav({
       link: "/projects",
     },
   ];
-  const scrollinks = [
-    {
-      title: "EXPERTISE",
-      link: scrolexp,
-    },
-
-    {
-      title: "SERVICES",
-      link: scrolservice,
-    },
-    {
-      title: "CONTACT",
-      link: scrolcontact,
-    },
-  ];
 
   return (
     <nav className={`w-full fixed bg-${background} ${shadow} snap-y z-40`}>
@@ -88,27 +78,43 @@ export default function Nav({
                 </li>
               </Link>
             ))}
-            {scrollinks.map((nav, ind) => (
-              <button
-                onClick={() =>
-                  nav.link.current?.scrollIntoView({
-                    block: "start",
-                    inline: "start",
-                    behavior: "smooth",
-                  })
-                }
-                key={ind}
-              >
-                <li
+            {scrollinks &&
+              scrollinks.map((nav, ind) => (
+                <button
+                  onClick={() =>
+                    nav.link.current?.scrollIntoView({
+                      block: "start",
+                      inline: "start",
+                      behavior: "smooth",
+                    })
+                  }
                   key={ind}
-                  className="basis-1/6 border-b-2 border-transparent text-center cursor-pointer
+                >
+                  <li
+                    key={ind}
+                    className="basis-1/6 border-b-2 border-transparent text-center cursor-pointer
                hover:border-dark-primary transition-all duration-200 
                lg:text-[13px] md:text-[9px] text-textlight font-semibold tracking-widest "
-                >
-                  {nav.title}
-                </li>
-              </button>
-            ))}
+                  >
+                    {nav.title}
+                  </li>
+                </button>
+              ))}
+            {scrollink &&
+              scrollink.map((nav, ind) => (
+                <button key={ind}>
+                  <Link href={nav.link} key={ind}>
+                    <li
+                      key={ind}
+                      className="basis-1/6 border-b-2 border-transparent text-center cursor-pointer
+                    hover:border-dark-primary transition-all duration-200 
+                     lg:text-[13px] md:text-[9px] text-textlight font-semibold tracking-widest "
+                    >
+                      {nav.title}
+                    </li>
+                  </Link>
+                </button>
+              ))}
           </div>
 
           <div className="flex basis-1/4 justify-center space-x-1 text-textlight">
@@ -199,27 +205,43 @@ export default function Nav({
               </li>
             ))}
             <div className="flex flex-col">
-              {scrollinks.map((nav, ind) => (
-                <button
-                  onClick={() =>
-                    nav.link.current?.scrollIntoView({
-                      block: "start",
-                      inline: "start",
-                      behavior: "smooth",
-                    })
-                  }
-                  key={ind}
-                >
-                  <li
+              {scrollinks &&
+                scrollinks.map((nav, ind) => (
+                  <button
+                    onClick={() =>
+                      nav.link.current?.scrollIntoView({
+                        block: "start",
+                        inline: "start",
+                        behavior: "smooth",
+                      })
+                    }
                     key={ind}
-                    className=" basis-1/12 border-b-2 border-transparent text-center cursor-pointer
+                  >
+                    <li
+                      key={ind}
+                      className=" basis-1/12 border-b-2 border-transparent text-center cursor-pointer
                   hover:border-dark-primary hover:basis-2/12 transition-all duration-200 
                   text-[13px] text-slate-600 font-semibold tracking-widest"
-                  >
-                    {nav.title}
-                  </li>
-                </button>
-              ))}
+                    >
+                      {nav.title}
+                    </li>
+                  </button>
+                ))}
+              {scrollink &&
+                scrollink.map((nav, ind) => (
+                  <button key={ind}>
+                    <Link href={nav.link} key={ind}>
+                      <li
+                        key={ind}
+                        className=" basis-1/12 border-b-2 border-transparent text-center cursor-pointer
+                  hover:border-dark-primary hover:basis-2/12 transition-all duration-200 
+                  text-[13px] text-slate-600 font-semibold tracking-widest"
+                      >
+                        {nav.title}
+                      </li>
+                    </Link>
+                  </button>
+                ))}
             </div>
           </div>
         </CSSTransition>
