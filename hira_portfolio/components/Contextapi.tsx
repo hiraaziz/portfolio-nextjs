@@ -2,6 +2,7 @@
 import React, { createContext, useRef } from "react";
 
 export const Navcontext = createContext<null | any>(null);
+
 const Contextapi = ({ children }: { children: React.ReactNode }) => {
   const expertiseRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
