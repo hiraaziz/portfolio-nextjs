@@ -1,9 +1,7 @@
 "use client";
-import Contact from "@/components/Contact";
 import Nav from "@/components/Nav";
 import Image from "next/image";
 import React, { useRef } from "react";
-import { Navwrapper } from "@/components/Navwrapper";
 
 type scrolType = {
   title: string;
