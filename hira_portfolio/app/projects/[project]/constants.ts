@@ -1,4 +1,5 @@
 export type projectTypes = {
+  pagename: string;
   title: string;
   description: string;
   category: string;
@@ -9,6 +10,7 @@ export type projectTypes = {
 };
 export const projectdata: projectTypes[] = [
   {
+    pagename: "panaverse",
     title: "Panaverse",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit totam atque dignissimos porro, exercitationem, neque alias ea aliquid quibusdam voluptates impedit maxime aut asperiores consequatur iste. Corporis fuga ducimus dignissimos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci non dolorem consequatur vitae hic.",
@@ -20,6 +22,7 @@ export const projectdata: projectTypes[] = [
   },
 
   {
+    pagename: "pricing",
     title: "Pricing UI",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit totam atque dignissimos porro, exercitationem, neque alias ea aliquid quibusdam voluptates impedit maxime aut asperiores consequatur iste. Corporis fuga ducimus dignissimos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci non dolorem consequatur vitae hic.",
@@ -31,6 +34,7 @@ export const projectdata: projectTypes[] = [
   },
 
   {
+    pagename: "emaan",
     title: "Emaan Institute",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit totam atque dignissimos porro, exercitationem, neque alias ea aliquid quibusdam voluptates impedit maxime aut asperiores consequatur iste. Corporis fuga ducimus dignissimos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci non dolorem consequatur vitae hic.",
@@ -41,6 +45,7 @@ export const projectdata: projectTypes[] = [
     img: "/emaan.png",
   },
   {
+    pagename: "quiz",
     title: "Quiz Appication",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit totam atque dignissimos porro, exercitationem, neque alias ea aliquid quibusdam voluptates impedit maxime aut asperiores consequatur iste. Corporis fuga ducimus dignissimos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci non dolorem consequatur vitae hic.",
@@ -51,6 +56,7 @@ export const projectdata: projectTypes[] = [
     img: "/quiz.png",
   },
   {
+    pagename: "resume",
     title: "Resume Builder",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit totam atque dignissimos porro, exercitationem, neque alias ea aliquid quibusdam voluptates impedit maxime aut asperiores consequatur iste. Corporis fuga ducimus dignissimos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci non dolorem consequatur vitae hic.",
@@ -61,6 +67,7 @@ export const projectdata: projectTypes[] = [
     img: "/resume.png",
   },
   {
+    pagename: "todo",
     title: "Todo Application",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit totam atque dignissimos porro, exercitationem, neque alias ea aliquid quibusdam voluptates impedit maxime aut asperiores consequatur iste. Corporis fuga ducimus dignissimos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci non dolorem consequatur vitae hic.",
@@ -71,3 +78,14 @@ export const projectdata: projectTypes[] = [
     img: "/todo.png",
   },
 ];
+
+export function projectdetail(projectParams?: string): projectTypes[] {
+  if (projectParams) {
+    const singleProject = projectdata.filter(
+      (p) => projectParams === p.pagename
+    );
+    return singleProject;
+  } else {
+    return projectdata;
+  }
+}
