@@ -48,4 +48,11 @@ export const work: worktype[] = [
     link: "https://todoapp-tau-orcin.vercel.app/",
     routelink: "/projects/todo",
   },
+  {
+    title: "Blog Post Application",
+    type: "nextjs",
+    img: "/contentful.png",
+    link: "https://hira-contentful-next.vercel.app/",
+    routelink: "/projects/blog",
+  },
 ];
