@@ -52,7 +52,7 @@ const Services = ({ scrol }: { scrol: React.LegacyRef<HTMLDivElement> }) => {
           hover:shadow-lg"
         >
           <GrReactjs className="text-secondary w-10 h-10" />
-          <h1 className="font-semibold text-xl">UX/UI Design</h1>
+          <h1 className="font-semibold text-xl">FrontEnd Development</h1>
           <p className="font-medium text-sm text-gray-400 w-3/4">
             It is a long established fact that a reader will be distracted by
             the when looking at its layout.
@@ -65,7 +65,7 @@ const Services = ({ scrol }: { scrol: React.LegacyRef<HTMLDivElement> }) => {
           hover:shadow-lg"
         >
           <SiAdobeacrobatreader className="text-secondary w-10 h-10" />
-          <h1 className="font-semibold text-xl">UX/UI Design</h1>
+          <h1 className="font-semibold text-xl">Adobe</h1>
           <p className="font-medium text-sm text-gray-400 w-3/4">
             It is a long established fact that a reader will be distracted by
             the when looking at its layout.
