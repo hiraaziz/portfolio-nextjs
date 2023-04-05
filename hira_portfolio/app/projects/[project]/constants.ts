@@ -77,6 +77,17 @@ export const projectdata: projectTypes[] = [
     github: "https://github.com/hiraaziz/todoapp",
     img: "/todo.png",
   },
+  {
+    pagename: "blog",
+    title: "Blog Post Application",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit totam atque dignissimos porro, exercitationem, neque alias ea aliquid quibusdam voluptates impedit maxime aut asperiores consequatur iste. Corporis fuga ducimus dignissimos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci non dolorem consequatur vitae hic.",
+    category: "Next js",
+    subject: "Contentful Nextjs 13",
+    website: "https://hira-contentful-next.vercel.app/",
+    github: "https://github.com/hiraaziz/userprofile",
+    img: "/contentful.png",
+  },
 ];
 
 export function projectdetail(projectParams?: string): projectTypes[] {
