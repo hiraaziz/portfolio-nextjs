@@ -27,7 +27,7 @@ const Portfolio = () => {
         Obviously Im a Web Designer. Experienced with all stages of the
         development cycle for dynamic web projects.
       </motion.p>
-      <PortfolioCards option={"reactjs"} />
+      <PortfolioCards option={"nextjs"} />
       <Link href="/projects">
         <button
           className="flex justify-evenly mt-20 text-[#E54B4B] border border-1 border-[#E54B4B] py-2  

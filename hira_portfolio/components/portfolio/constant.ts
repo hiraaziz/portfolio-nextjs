@@ -7,6 +7,13 @@ export type worktype = {
 };
 export const work: worktype[] = [
   {
+    title: "Ecommerce Application",
+    type: "nextjs",
+    img: "/ecommerce.png",
+    link: "https://hira-ecommerce.vercel.app/",
+    routelink: "/projects/ecommere",
+  },
+  {
     title: "Panaverse",
     type: "nextjs",
     img: "/panaverse.png",
