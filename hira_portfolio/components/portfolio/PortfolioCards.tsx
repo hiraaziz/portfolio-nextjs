@@ -87,7 +87,7 @@ const PortfolioCards = ({ option }: any) => {
         </button>
       </div>
 
-      <div className="flex flex-wrap justify-center items-center w-800 h-full ">
+      <div className="flex flex-wrap justify-center items-center w-[90%] h-full ">
         {data.map((data, ind) => (
           <motion.div
             key={ind}
@@ -98,7 +98,7 @@ const PortfolioCards = ({ option }: any) => {
               <Image
                 src={data.img}
                 alt="img"
-                width={300}
+                width={400}
                 height={300}
                 className="rounded-t-md transition-all duration-300 hover:scale-110 object-cover border border-t-text"
               />

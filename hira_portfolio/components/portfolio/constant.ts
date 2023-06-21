@@ -31,7 +31,7 @@ export const work: worktype[] = [
     title: "Emaan Institue",
     type: "reactjs",
     img: "/emaan.png",
-    link: "https://emaansite.netlify.app/",
+    link: "https://emaan.edu.pk/",
     routelink: "/projects/emaan",
   },
   {

@@ -10,11 +10,22 @@ export type projectTypes = {
 };
 export const projectdata: projectTypes[] = [
   {
+    pagename: "ecommere",
+    title: "Ecommerce Application",
+    description:
+      "Ecommerce Fully responsive application, build with Nextjs 13, Typescript, Tailwind css, protect routes with Next Auth and Sanity for products. In backend, I have used Drizzle Orm, with Postgress DB and stripe for secure payment",
+    category: "Full Stack",
+    subject: "Full Stack Ecommerce application",
+    website: "https://hira-ecommerce.vercel.app/",
+    github: "https://github.com/hiraaziz/ecommerce",
+    img: "/ecommerce.png",
+  },
+  {
     pagename: "panaverse",
     title: "Panaverse",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit totam atque dignissimos porro, exercitationem, neque alias ea aliquid quibusdam voluptates impedit maxime aut asperiores consequatur iste. Corporis fuga ducimus dignissimos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci non dolorem consequatur vitae hic.",
-    category: "Next js",
+      "Fully responsive Panaverse site build with Nextjs 13, Tailwind css and Framer Motion ",
+    category: "Frontend",
     subject: "Web Design",
     website: 'https://panaverse-rho.vercel.app/"',
     github: "https://github.com/hiraaziz/panaverse",
@@ -24,9 +35,8 @@ export const projectdata: projectTypes[] = [
   {
     pagename: "pricing",
     title: "Pricing UI",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit totam atque dignissimos porro, exercitationem, neque alias ea aliquid quibusdam voluptates impedit maxime aut asperiores consequatur iste. Corporis fuga ducimus dignissimos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci non dolorem consequatur vitae hic.",
-    category: "Next js",
+    description: "Fully responsive pricing UI Card in Nextjs 13 and Chakra UI",
+    category: "Frontend",
     subject: "Web Design",
     website: "https://pricingui-steel.vercel.app/",
     github: "https://github.com/hiraaziz/pricingui",
@@ -37,18 +47,17 @@ export const projectdata: projectTypes[] = [
     pagename: "emaan",
     title: "Emaan Institute",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit totam atque dignissimos porro, exercitationem, neque alias ea aliquid quibusdam voluptates impedit maxime aut asperiores consequatur iste. Corporis fuga ducimus dignissimos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci non dolorem consequatur vitae hic.",
-    category: "Next js",
+      "Fully responsive Educational Institute Frontend website build in Reactjs, tailwind and Framer Motion ",
+    category: "Frontend",
     subject: "Web Design",
     website: "https://emaansite.netlify.app/",
-    github: "https://github.com/hiraaziz/emaan-app",
+    github: "https://emaan.edu.pk/",
     img: "/emaan.png",
   },
   {
     pagename: "quiz",
     title: "Quiz Appication",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit totam atque dignissimos porro, exercitationem, neque alias ea aliquid quibusdam voluptates impedit maxime aut asperiores consequatur iste. Corporis fuga ducimus dignissimos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci non dolorem consequatur vitae hic.",
+    description: "Fuuly responsive Quiz Application in Reactjs and Css",
     category: "Next js",
     subject: "Web Design",
     website: "https://hiraquizapp.netlify.app/",
@@ -59,8 +68,8 @@ export const projectdata: projectTypes[] = [
     pagename: "resume",
     title: "Resume Builder",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit totam atque dignissimos porro, exercitationem, neque alias ea aliquid quibusdam voluptates impedit maxime aut asperiores consequatur iste. Corporis fuga ducimus dignissimos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci non dolorem consequatur vitae hic.",
-    category: "Next js",
+      "Fully responsive Resume Builder Application build using Reactjs, use Context and use Reducer and Material UI",
+    category: "Frontend",
     subject: "Web Design",
     website: "https://hiraresumebuilder.netlify.app/",
     github: "https://github.com/hiraaziz/Resume-Builder",
@@ -70,8 +79,8 @@ export const projectdata: projectTypes[] = [
     pagename: "todo",
     title: "Todo Application",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit totam atque dignissimos porro, exercitationem, neque alias ea aliquid quibusdam voluptates impedit maxime aut asperiores consequatur iste. Corporis fuga ducimus dignissimos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci non dolorem consequatur vitae hic.",
-    category: "Next js",
+      "Fully Responsive full stack Application using Nextjs, tailwind, Drizzle, Postgress",
+    category: "Full Stack",
     subject: "Web Design",
     website: "https://todoapp-tau-orcin.vercel.app/",
     github: "https://github.com/hiraaziz/todoapp",
@@ -81,8 +90,8 @@ export const projectdata: projectTypes[] = [
     pagename: "blog",
     title: "Blog Post Application",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit totam atque dignissimos porro, exercitationem, neque alias ea aliquid quibusdam voluptates impedit maxime aut asperiores consequatur iste. Corporis fuga ducimus dignissimos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci non dolorem consequatur vitae hic.",
-    category: "Next js",
+      "Fully responsive Blog Application using Nextjs, Contentful headless cms to manage blogs and tailwind css",
+    category: "Frontend",
     subject: "Contentful Nextjs 13",
     website: "https://hira-contentful-next.vercel.app/",
     github: "https://github.com/hiraaziz/userprofile",

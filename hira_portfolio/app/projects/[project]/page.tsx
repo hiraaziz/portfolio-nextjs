@@ -11,7 +11,7 @@ export function generateStaticParams() {
 }
 const Page = ({ params }: { params: { project: string } }) => {
   const [singleProject]: projectTypes[] = projectdetail(params.project);
-
+  console.log(singleProject);
   return (
     <div
       className="relative min-h-[100vh] w-full flex flex-col justify-start  md:flex-row md:items-start
