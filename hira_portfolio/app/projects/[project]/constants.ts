@@ -21,6 +21,17 @@ export const projectdata: projectTypes[] = [
     img: "/ecommerce.png",
   },
   {
+    pagename: "foodapp",
+    title: "Food Delievery application",
+    description:
+      "food App is Fully responsive application, build with Reactjs 18 ans Swiggy api, Tailwind css. Real-Time Menu Updates, Super Fast Loading with Lazy Loading and Chunking,Smart Search & Filters for easy discovery,User-Friendly Navigation",
+    category: "Frontend",
+    subject: "Frontend application",
+    website: "https://hiras-food-app.netlify.app/",
+    github: "https://github.com/hiraaziz/Food-Ordering-App",
+    img: "/foodapp.png",
+  },
+  {
     pagename: "panaverse",
     title: "Panaverse",
     description:

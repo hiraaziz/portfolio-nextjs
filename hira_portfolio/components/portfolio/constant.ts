@@ -14,6 +14,13 @@ export const work: worktype[] = [
     routelink: "/projects/ecommere",
   },
   {
+    title: "Food Ordering App",
+    type: "reactjs",
+    img: "/foodapp.png",
+    link: "https://hiras-food-app.netlify.app/",
+    routelink: "/projects/foodapp",
+  },
+  {
     title: "Panaverse",
     type: "nextjs",
     img: "/panaverse.png",

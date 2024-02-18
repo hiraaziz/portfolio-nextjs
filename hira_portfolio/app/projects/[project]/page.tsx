@@ -24,11 +24,11 @@ const Page = ({ params }: { params: { project: string } }) => {
         className="w-full md:basis-2/5 h-full order-2 md:order-1 flex flex-col items-center md:items-center"
       >
         <h1 className="py-4 px-4 md:px-0 font-semibold tracking-wider text-text text-2xl">
-          {singleProject.title}
+          {singleProject?.title}
         </h1>
         <div className="w-96 h-[1px] bg-slate-300" />
         <p className="py-4 px-4 md:px-0 font-medium text-sm text-gray-400 leading-loose w-96">
-          {singleProject.description}
+          {singleProject?.description}
         </p>
 
         <div className="max-w-96 h-fit bg-[#F9FAFD] p-6 mx-4 md:mx-0 rounded-md">
